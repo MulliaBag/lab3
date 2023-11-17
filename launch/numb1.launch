@@ -1,5 +1,6 @@
 <launch>
 <arg name="new_name"/>
+<include file="$(find pakForlab)/launch/anotherOne.launch" pass_all_args="true"/>
 <group ns="new_ns">
  <node name="listener" pkg="pakForlab" type="listener.py" output="screen">
         <remap from="my_chat_topic" to="$(arg new_name)"/>
@@ -9,4 +10,8 @@
     </node>
  </group>
 </launch>
+
+
+
+
 
