@@ -1,0 +1,3 @@
+<launch>
+ <node name="reqNode" pkg="pakForlab" type="reqNode.py" output="screen"/>
+</launch>

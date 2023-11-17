@@ -1,0 +1,4 @@
+<launch>
+	<node name="polyNode" pkg="pakForlab" type="polyNode.py" output="screen"/>
+	<node name="sumNode" pkg="pakForlab" type="sumNode.py" output="screen"/>
+</launch>

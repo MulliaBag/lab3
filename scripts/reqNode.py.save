@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+import rospy
+from std_msgs.msg import Int16
+from random import randint
+
+rospy.init_node('reqNode')
+pub = rospy.Publisher('reqTopic', Int16, queue_size=10)
+rate = rospy.Rate(10)
+num=0
+
+def start_reqNode
+	global num
+	msg = Int16()
+	for i in range (1:4):
+	num=randint(0, 9)
+	
+	msg.data = num
+        pub.publish(msg)
+
+	rate.sleep() 
+
+try:
+    start_reqNode()
+except (rospy.ROSInterruptException, KeyboardInterrupt):
+    rospy.logerr('Exception catched')
+
