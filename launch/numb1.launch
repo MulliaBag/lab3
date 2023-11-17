@@ -1,0 +1,12 @@
+<launch>
+<arg name="new_name"/>
+<group ns="new_ns">
+ <node name="listener" pkg="pakForlab" type="listener.py" output="screen">
+        <remap from="my_chat_topic" to="$(arg new_name)"/>
+    </node>
+    <node name="talker" pkg="pakForlab" type="talker.py" output="screen">
+        <remap from="my_chat_topic" to="$(arg new_name)"/>
+    </node>
+ </group>
+</launch>
+

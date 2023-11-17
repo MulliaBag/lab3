@@ -1,0 +1,9 @@
+<launch>
+<arg name="new_name"/>
+<node name="listener" pkg="pakforlab" type="listener.py" output="screen">
+        <remap from="chatter" to="$(arg new_name)"/
+</node>
+    <node name="talker" pkg="rospy_tutorials" type="talker.py" output="screen">
+        <remap from="chatter" to="$(arg new_topic_name)"/>
+    </node>
+</launch>ospy_tutorials
